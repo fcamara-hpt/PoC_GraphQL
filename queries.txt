@@ -1,0 +1,110 @@
+QUERIES
+
+Abaixo seguem várias queries com uso de recursos como diretivas, fragment e variáveis. É recomendado que tudo seja copiado
+e colado na interface que o servidor provê, inclusive as variáveis no campo "Query Variables". Após o uso das queries, fica
+mais fácil compreedê-las e alterá-las conforme necessário.
+
+#users queries
+query Users ($skipUsers:Boolean!){
+  users {
+    id
+    ...usersAttributes @skip (if:$skipUsers)
+  }
+}
+
+query UserById($idUserById:ID!){
+  userId (id:$idUserById) {
+    ...usersAttributes
+  }
+}
+
+query UsersOlderThan24{
+  usersOld {
+    ...usersAttributes
+  }
+}
+
+query UsersYoungerThan24{
+  usersYoung {
+    ...usersAttributes
+  }
+}
+
+query UsersWith23{
+  usersWith23 {
+    ...usersAttributes
+  }
+}
+
+query UsersBetween20And50{
+  usersBetween20And50 {
+    ...usersAttributes
+  }
+}
+
+query UsersByRegex{
+  usersByRegex{
+    ...usersAttributes
+  }
+}
+
+query UsersByEmailRegex{
+  usersByEmailRegex{
+    ...usersAttributes
+  }
+}
+  
+#posts queries  
+query Posts ($includePosts:Boolean!){
+  posts {
+    ...postsAttributes @include (if:$includePosts)
+  }
+}
+
+query PostId($idPostById:ID!){
+  postId (id:$idPostById){
+    ...postsAttributes
+  }
+}
+
+query PostByTitle($postTitle:String!){
+  postByTitle(title:$postTitle) {
+    ...postsAttributes
+  }
+}
+
+query PostCount{
+  postCount
+}
+
+query PostsBetweenDate{
+  postsBetweenDate {
+    ...postsAttributes
+  }
+}
+
+#users and posts fragments
+fragment usersAttributes on  user{
+  name
+  email
+  tel
+  age
+  evaluation
+}
+
+fragment postsAttributes on  Post{
+  title
+  body
+  user
+  date
+}
+
+#variables
+{
+  "idUser": "58dd19542f0f7e2090787eb9",
+  "postTitle": "Post's title",
+  "idPostById":"58dba8cf8fb332189cdb0553",
+  "idUserById":"58dd19542f0f7e2090787eb8",
+  "skipUsers": false,
+  "includePosts": true
+}

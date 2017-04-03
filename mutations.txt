@@ -1,0 +1,41 @@
+MUTAÇÕES
+
+1- Criando usuário
+
+addUser( name:"Michael", email:"michael@fcamara.com.br", tel:"33145673", age:24, evaluation: [4, 2, 1, 3, 2]) {
+    id,
+    name,
+    email,
+    tel,
+    age,
+    evaluation
+  }
+}
+
+2- Criando post
+
+mutation {
+  addPost( title:"Post's title", body:"Post's body", user:"58da99a3ddd07b0f5c86cb3c", date:"2017-03-28T09:36:27.000Z") {
+    id,
+    title,
+    body,
+    user,
+    date
+  }
+}
+
+3- Editando usuário
+
+mutation {
+  updateUser(id:"58da99a3ddd07b0f5c86cb3c", name:"Michael Keese", email:"michaelkeese@fcamara.com.br", tel:"0800 234 231", age:27, evaluation:[4, 3, 1, 4, 5]) {
+    id
+  }
+}
+
+4- Editando post
+
+mutation {
+  updatePost(id:"58dbada0a754c404a80ae585", title:"New title", body:"Updating the post", user:"58dd19542f0f7e2090787eb8", age:27, date:"2017-04-03T11:21:33.000Z") {
+    id
+  }
+}
