@@ -1,14 +1,15 @@
 # PoC - GraphQL
 > “Describe your data, ask for what you want, get predictable results." - GraphQL
 ## Introdução
-	GraphQL é uma query language para API’s. Não está ligado a nenhum banco de dados específico ou qualquer outro
+GraphQL é uma query language para API’s. Não está ligado a nenhum banco de dados específico ou qualquer outro
 mecanismo de armazenamento de dados, mas sim ao código existente na API e seus respectivos dados. Um serviço 
 GraphQL opera ao definir tipos e adicionar campos nestes tipos criados. Funções para cada campo são fornecidas
 pelo serviço em cada tipo existente, a fim de consumir os dados da API. A partir de um servidor GraphQL operando
 um serviço, GraphQL queries podem ser solicitadas para posterior validação e execução. Ao receber uma query, o
 servidor a analisa para verificar se os tipos referenciados foram definidos. Caso não haja problemas, o servidor
 executa as funções necessárias para produzir o resultado requisitado pela query.
-	O GraphQL garante a segurança e privacidade dos dados através do uso de Schema. É no Schema GraphQL que constam
+
+O GraphQL garante a segurança e privacidade dos dados através do uso de Schema. É no Schema GraphQL que constam
 todos os tipos, os atributos, relacionamentos, coleções de dados e as funções que podem ser utilizadas para buscar
 resultados de queries. Logo, o solicitante estará limitado pelos recursos disponibilizados pelo Schema.
 
@@ -21,8 +22,10 @@ https://nodejs.org/en/download/
 #### MongoDB
 Para utilizar este projeto é necessário instalar MongoDB e garantir que há uma instância rodando:
 https://www.mongodb.com/download-center
+
 Para verificar os dados que estão sendo salvos é possível utilizar alguma ferramenta de gestão, como MongoChef
-(Studio 3T): https://studio3t.com/
+(Studio 3T):
+https://studio3t.com/
 
 #### Módulos NPM
 Há vários módulos NPM no projeto, mas para obtê-los basta instalá-los com:
@@ -57,7 +60,7 @@ Para mutações de criação e edição de usuário / post, ver arquivo "mutations.txt"
 Para queries diversas implementadas no projeto, ver arquivo "queries.txt"
 
 ### Mongoose Schema
-[userSchema.js](src/models/user/userSchema.js) e [postSchema.js](src/models/posts/postSchema.js)( definem esquemas mongoose e implementam várias funções para que os Resolvers do GraphQL possam fazer as consultas.
+[userSchema.js](src/models/user/userSchema.js) e [postSchema.js](src/models/posts/postSchema.js) definem esquemas mongoose e implementam várias funções para que os Resolvers do GraphQL possam fazer as consultas.
 
 ### GraphQL Schema
 [userType.js](src/models/user/userType.js) e [postType.js](src/models/posts/postType.js) criam os GraphQLObjectType que descrevem a estrutura dos modelos de dados.
