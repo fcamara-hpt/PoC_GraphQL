@@ -2,27 +2,30 @@
 > “Describe your data, ask for what you want, get predictable results." - GraphQL
 ## Introdução
 	GraphQL é uma query language para API’s. Não está ligado a nenhum banco de dados específico ou qualquer outro
-	mecanismo de armazenamento de dados, mas sim ao código existente na API e seus respectivos dados. Um serviço 
-	GraphQL opera ao definir tipos e adicionar campos nestes tipos criados. Funções para cada campo são fornecidas
-	pelo serviço em cada tipo existente, a fim de consumir os dados da API. A partir de um servidor GraphQL operando
-	um serviço, GraphQL queries podem ser solicitadas para posterior validação e execução. Ao receber uma query, o
-	servidor a analisa para verificar se os tipos referenciados foram definidos. Caso não haja problemas, o servidor
-	executa as funções necessárias para produzir o resultado requisitado pela query.
+mecanismo de armazenamento de dados, mas sim ao código existente na API e seus respectivos dados. Um serviço 
+GraphQL opera ao definir tipos e adicionar campos nestes tipos criados. Funções para cada campo são fornecidas
+pelo serviço em cada tipo existente, a fim de consumir os dados da API. A partir de um servidor GraphQL operando
+um serviço, GraphQL queries podem ser solicitadas para posterior validação e execução. Ao receber uma query, o
+servidor a analisa para verificar se os tipos referenciados foram definidos. Caso não haja problemas, o servidor
+executa as funções necessárias para produzir o resultado requisitado pela query.
 	O GraphQL garante a segurança e privacidade dos dados através do uso de Schema. É no Schema GraphQL que constam
-	todos os tipos, os atributos, relacionamentos, coleções de dados e as funções que podem ser utilizadas para buscar
-	resultados de queries. Logo, o solicitante estará limitado pelos recursos disponibilizados pelo Schema.
+todos os tipos, os atributos, relacionamentos, coleções de dados e as funções que podem ser utilizadas para buscar
+resultados de queries. Logo, o solicitante estará limitado pelos recursos disponibilizados pelo Schema.
 
 ## Instalação
 
 #### Node
-	Este projeto faz uso de ES6, portanto, requer versão 4+ do node. De preferência, instale a última versão estável: https://nodejs.org/en/download/
+Este projeto faz uso de ES6, portanto, requer versão 4+ do node. De preferência, instale a última versão estável:
+https://nodejs.org/en/download/
 
 #### MongoDB
-	Para utilizar este projeto é necessário instalar MongoDB e garantir que há uma instância rodando: https://www.mongodb.com/download-center
-	Para verificar os dados que estão sendo salvos é possível utilizar alguma ferramenta de gestão, como MongoChef (Studio 3T): https://studio3t.com/
+Para utilizar este projeto é necessário instalar MongoDB e garantir que há uma instância rodando:
+https://www.mongodb.com/download-center
+Para verificar os dados que estão sendo salvos é possível utilizar alguma ferramenta de gestão, como MongoChef
+(Studio 3T): https://studio3t.com/
 
 #### Módulos NPM
-	Há vários módulos NPM no projeto, mas para obtê-los basta instalá-los com:
+Há vários módulos NPM no projeto, mas para obtê-los basta instalá-los com:
 
 ```js
 npm install
