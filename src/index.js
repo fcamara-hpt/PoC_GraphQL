@@ -28,16 +28,13 @@ let RootQuery = new GraphQLObjectType({
   fields: () => ({
     users: userQueries.users,
     userId: userQueries.userId,
-    userByName: userQueries.userByName,
     usersOld: userQueries.usersOld,
     usersYoung: userQueries.usersYoung,
     usersWith23: userQueries.usersWith23,
     usersBetween20And50: userQueries.usersBetween20And50,
-    usersAverageAge: userQueries.usersAverageAge,
     usersByRegex: userQueries.usersByRegex,
     usersByEmailRegex: userQueries.usersByEmailRegex,
 
-    post: postQueries.post,
     postCount: postQueries.postCount,
     posts: postQueries.posts,
     postId: postQueries.postId,

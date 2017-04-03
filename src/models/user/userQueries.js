@@ -17,10 +17,6 @@ export default {
     type: new GraphQLList(userType),
     resolve: user.getListOfUsers
   },
-  usersAverageAge: {
-    type: GraphQLInt,
-    resolve: user.getUsersAverageAge
-  },
   usersByRegex: {
     type: new GraphQLList(userType),
     resolve: user.getListOfUsersByRegex
@@ -53,14 +49,5 @@ export default {
       }
     },
     resolve: user.getUserById
-  },
-  userByName: {
-    type: userType,
-    args: {
-      name: {
-        type: GraphQLString
-      }
-    },
-    resolve: user.getUserByName
   }
 };

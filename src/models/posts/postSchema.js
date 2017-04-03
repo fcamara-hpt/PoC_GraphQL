@@ -56,16 +56,6 @@ module.exports.getPostByTitle = (root, {title}) => {
   });
 };
 
-module.exports.getPostsByUser = (root, {id}) => {
-  return new Promise((resolve, reject) => {
-    post.find({
-      user:id
-    }).exec((err, res) => {
-      err ? reject(err) : resolve(res);
-    });
-  });
-};
-
 module.exports.getPostsBetweenDate = () => {
   return new Promise((resolve, reject) => {
     post.find({

@@ -76,19 +76,7 @@ module.exports.getListOfUsersBetween20And50 = () => {
   });
 };
 
-module.exports.getUsersAverageAge = () => {
-  return new Promise((resolve, reject) => {
-    user.aggregate([{$project:{AvgEvaluation:{
-          $avg:"$evaluation"
-        }
-      }
-    }]).exec((err, res) => {
-        err ? reject(err) : resolve(res);
-    });
-  });
-};
-
-module.exports.getListOfUsersByRegex = () => {
+module.exports.getListOfUsersByRegex = (search) => {
   return new Promise((resolve, reject) => {
     user.find({
       name: {
