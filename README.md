@@ -13,28 +13,35 @@ O GraphQL garante a segurança e privacidade dos dados através do uso de Schema. 
 todos os tipos, os atributos, relacionamentos, coleções de dados e as funções que podem ser utilizadas para buscar
 resultados de queries. Logo, o solicitante estará limitado pelos recursos disponibilizados pelo Schema.
 
-* __Este projeto traz uma Api de usuários e posts com suporte à mutações e queries em GraphQL__
+> __Este projeto traz uma Api de usuários e posts com suporte à mutações e queries em GraphQL__
 
 ## Vantagens do GraphQL
 * Requisições, respostas do servidor e todo o processo de busca de dados é feito de maneira simples e intuitiva. Tudo
 isso a partir de um único endpoint, característica esta que traz consigo um novo conceito para contrapor o conceito
 aplicado em API’s REST;
+
 * A estrutura da resposta do servidor para uma query é praticamente a mesma estrutura da própria query, e o conteúdo
 desta resposta possui somente o que foi requisitado, evitando assim o comprometimento de performance ao processar
 dados desnecessários;
+
 * Por operar em um único endpoint, os dados podem ser entregues em pacotes, evitando múltiplas chamadas para atingir o
 mesmo resultado;
+
 * As funções descritas no Schema oferecem recurso de autocomplete para criação de queries, tornando a experiência de
 exploração de dados mais fácil. Tal recurso faz com que seja desnecessário conhecer os relacionamentos entre dados que
 estão modelados na API;
+
 * Recursos auxiliares para criação de queries, como fragment, diretivas, criação de variáveis, entre outros.
 
 ## Desvantagens do GraphQL
 * Escassez de material de apoio devido ao GraphQL ser relativamente novo;
+
 * Todos os atributos, tipos e funções da API devem ser modelados manualmente, fato este que gera uma complexidade elevada
 de implementação em casos onde a API é relativamente robusta;
+
 * Uma API feita com GraphQL é dependente do banco de dados. Logo, sua implementação varia conforme o banco que está sendo
 usado;
+
 * Há poucas libs disponibilizadas pela comunidade para facilitar o processo de consumir uma API com GraphQL.
 
 
