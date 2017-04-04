@@ -13,6 +13,8 @@ O GraphQL garante a segurança e privacidade dos dados através do uso de Schema. 
 todos os tipos, os atributos, relacionamentos, coleções de dados e as funções que podem ser utilizadas para buscar
 resultados de queries. Logo, o solicitante estará limitado pelos recursos disponibilizados pelo Schema.
 
+* __Este projeto traz uma Api de usuários e posts com suporte à mutações e queries em GraphQL__
+
 ## Vantagens do GraphQL
 * Requisições, respostas do servidor e todo o processo de busca de dados é feito de maneira simples e intuitiva. Tudo
 isso a partir de um único endpoint, característica esta que traz consigo um novo conceito para contrapor o conceito
