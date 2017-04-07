@@ -1,6 +1,6 @@
 {
   "name": "express-graphql-test",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "GraphQL, Mongo & Express Project",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "prestart": "babel src --out-dir dist",
     "start": " node dist/index.js"
   },
-  "author": "Dave Hudson <dave@applification.net> (http://applification.net)",
+  "author": "Michael Keese Martins <michael.martins@fcamara.com.br>, Lucas de Oliveira Isabel <lucas.isabel@fcamara.com.br> ",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",

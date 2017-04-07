@@ -98,3 +98,8 @@ Para queries diversas implementadas no projeto, ver arquivo "queries.txt"
 [userType.js](src/models/user/userType.js) e [postType.js](src/models/posts/postType.js) criam os GraphQLObjectType que descrevem a estrutura dos modelos de dados.
 
 [userMutations.js](src/models/user/userMutations.js), [postMutations.js](src/models/posts/postMutations.js), [userQueries.js](src/models/user/userQueries.js) e [postQueries.js](src/models/posts/postQueries.js) definem as operações disponíveis e as relacionam com os Resolvers do GraphQL.
+
+#### Contato
+
+Michael Keese Martins - michael.martins@fcamara.com.br
+Lucas de Oliveira Isabel - lucas.isabel@fcamara.com.br
